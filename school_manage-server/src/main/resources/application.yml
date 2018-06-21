@@ -19,5 +19,5 @@ spring:
 
 ## Mybatis 配置
 mybatis:
-  typeAliasesPackage: org.spring.springboot.domain
+  typeAliasesPackage: org.nc.school.model
   mapperLocations: classpath:mapper/*.xml
