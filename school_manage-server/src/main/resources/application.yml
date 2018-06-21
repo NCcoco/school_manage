@@ -1,0 +1,23 @@
+spring:
+  dubbo:
+    application:
+      name: provider
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    scan: org.nc.school.service
+
+    ## 数据源配置
+    datasource:
+      url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+## Mybatis 配置
+mybatis:
+  typeAliasesPackage: org.spring.springboot.domain
+  mapperLocations: classpath:mapper/*.xml
