@@ -6,7 +6,8 @@ package org.nc.school.model;
  * @author nc
  * @date 2018/6/21 08:59
  */
-public class Student {
+public class Student implements java.io.Serializable {
+
     private String id;
 
     private String access;
