@@ -1,9 +1,4 @@
-server:
-  port: 8081
-Spring:
-  dubbo:
-    application:
-      name: consumer
-    registry:
-      address: zookeeper://127.0.0.1:2181
-    scan: org.nc.school.controller
+
+spring:
+  profiles:
+    active: dev

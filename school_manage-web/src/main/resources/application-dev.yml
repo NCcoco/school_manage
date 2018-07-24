@@ -1,0 +1,33 @@
+spring:
+  dubbo:
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    scan: org.nc.school.controller
+  devtools:
+    restart:
+      enabled: true #启用热启动
+server:
+  port: 8081 #修改端口号
+  tomcat:
+    max-threads: 500 #配置最大线程数
+    min-spare-threads: 10 #配置最小线程数
+    max-connections: 5500
+    accept-count: 5000 #配置线程池被占满后可以在队列中缓存的最大值
+
+    #配置排除检测改动而重启服务 比如下面的例子展示了如何让Tests类被修改后不需要检测热重启
+    #spring.devtools.restart.exclude=org/reactivex/ReactivexApplication.*,application.properties
+
+    #上面的排除热启动不包括测试类,并且要排除的路径需要设置为classes包中的路径
+    #如果要保留默认的排除检测，使用spring.devtools.restart.additional.exclude
+
+    #你也可以使用下面的方式检测classes路径以外的文件被修改时进行热启动  (不过似乎并不行得通，当我试图让测试类被修改时热启动)
+    #spring.devtools.restart.additional-paths=target/test-classes/org/reactivex
+    #重新启动是通过两个类加载器实现的，一个类加载器加载第三方jar base类加载器 一个类加载器加载我们正在开发的代码 restart类加载器
+    #禁用热启动false 启用热启动true
+    #spring.devtools.restart.enabled=true
+
+
+    #开启远程项目 (这里没看懂)
+    #spring.devtools.remote.secret=mySecret

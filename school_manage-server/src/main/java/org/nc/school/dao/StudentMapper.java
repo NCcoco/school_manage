@@ -1,7 +1,6 @@
 package org.nc.school.dao;
 
 import org.nc.school.model.Student;
-import org.springframework.stereotype.Component;
 
 /**
  * @ClassName: StudentMapper
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Component;
  * @author nc
  * @date 2018/6/21 08:59
  */
-@Component
 public interface StudentMapper {
     int deleteByPrimaryKey(String id);
 

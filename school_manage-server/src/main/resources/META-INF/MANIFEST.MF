@@ -22,5 +22,5 @@ Class-Path: libs/zkclient-0.7.jar libs/jackson-module-parameter-names-
  .Final.jar libs/classmate-1.3.4.jar libs/jackson-core-2.9.6.jar libs/
  jboss-logging-3.3.2.Final.jar libs/spring-context-5.0.7.RELEASE.jar l
  ibs/validation-api-2.0.1.Final.jar libs/jackson-annotations-2.9.0.jar
-Main-Class: org.nc.school.Startup
+Main-Class: org.nc.school.StartupService
 
